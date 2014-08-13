@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>基于Bootstrap2的Web模板 - 管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="基于Bootstrap2的Web模板 - 管理">
+    <meta name="author" content="">
+
+    <!--fav-->
+    <link rel="shortcut icon" href="resources/images/app/fav.ico" type="image/x-icon">
+    <link rel="icon" href="resources/images/app/fav.ico" type="image/x-icon">
+
+    <!--css-->
+    <link href="resources/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/app/index.css" rel="stylesheet">
+    <link href="resources/vendor/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                <a class="brand" href="#">Template</a>
+
+                <div class="nav-collapse collapse">
+
+                    <p class="navbar-text pull-right">&nbsp; 当前用户：<a href="#" class="navbar-link">macrotea</a> | <a href="#" class="navbar-link">退出</a></p>
+
+                    <ul class="nav">
+                        <li class="active"><a href="#">主页</a></li>
+                        <li><a href="login.html" target="_blank">登陆页面</a></li>
+                        <li><a href="single.html" target="_blank">单独页面</a></li>
+                        <li><a href="#aboutModal" target="_blank" data-toggle="modal">关于</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="nav-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="navbar-form pull-right">
+                        <input class="span2" type="text" placeholder="关键字...">
+                        <button type="submit" class="btn">搜索</button>
+                    </form>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div> <!--div.navbar-->
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+
+            <div class="span2">
+                <div class="tabbable" id="leftTab">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab-common" data-toggle="tab">常用</a></li>
+                        <li><a href="#tab-basic" data-toggle="tab">基本</a></li>
+                    </ul>
+                    <div class="tab-content well well-small">
+                        <div class="tab-pane active" id="tab-common">
+                            <ul class="nav nav-list">
+                                <li class="nav-header">留言管理</li>
+                                <li><span> <a href="#">新增</a> &nbsp; <a href="#">列表</a> </span></li>
+
+                                <li class="nav-header">文章管理</li>
+                                <li><span> <a href="#">新增</a> &nbsp; <a href="#">列表</a> </span></li>
+                            </ul>
+                        </div>
+                        <!-- /#tab-common -->
+
+                        <div class="tab-pane" id="tab-basic">
+                            <ul class="nav nav-list">
+                                <li class="nav-header">评论管理</li>
+                                <li><span> <a href="#">新增</a> &nbsp; <a href="#">列表</a> </span></li>
+
+                                <li class="nav-header">广告管理</li>
+                                <li><span> <a href="#">新增</a> &nbsp; <a href="#">列表</a> </span></li></ul>
+                        </div>
+                        <!-- /#tab-basic -->
+                    </div><!--div.tab-content-->
+                </div> <!--div#leftTab-->
+            </div> <!--/span2-->
+
+            <div class="span10">
+                <div class="tabbable" id="middleTab">
+                    <ul class="nav nav-tabs">
+                        <li><a href="#tab1" data-toggle="tab">概况</a></li>
+                        <li><a href="#tab2" data-toggle="tab">邀请</a></li>
+                        <li class="active"><a href="#tab3" data-toggle="tab">列表</a></li>
+                    </ul>
+                    <div class="tab-content well">
+                        <div class="tab-pane" id="tab1">
+                            <p>
+                                <h4>访问统计：</h4>
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>日访统计</th>
+                                        <th>周访统计</th>
+                                        <th>月访统计</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="badge badge-info">0</span></td>
+                                        <td><span class="badge badge-info">19</span></td>
+                                        <td><span class="badge badge-info">2</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <h4>最近留言：</h4>
+                                <table class="table table-bordered" id="messageListTable">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>名字</th>
+                                        <th>公司</th>
+                                        <th>邮箱</th>
+                                        <th>手机</th>
+                                        <th>留言时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="7">暂无</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div> <!-- #tab1 -->
+
+                        <div class="tab-pane active" id="tab3">
+                            <p>
+                                <form id="searchForm" class="form-inline" action="#" method="post">
+                                    工具名：<input id="bookName" name="bookName" value="" type="text" class="input-small" placeholder="工具名" autocomplete="off">
+                                    &nbsp;&nbsp;
+                                    <label class="checkbox">
+                                        <input id="enable" name="enable" type="checkbox" checked="checked"> 是否启用
+                                    </label>
+                                    &nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-primary">搜索</button>
+                                    <a href="#" class="btn">新增</a>
+                                </form>
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>书籍名称</th>
+                                        <th>所属领域</th>
+                                        <th>阅读时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="badge">5</span></td>
+                                            <td><a href="http://product.dangdang.com/20379289.html" alt="精通Spring — 深入Java EE开发核心技术" target="_blank">精通Spring — 深入Java EE开发核心技术</a></td>
+                                            <td>Java开发</td>
+                                            <td>2013-03-01</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a class="btn" title="编辑" href="#"><i class="icon-edit"></i></a>
+                                                    <a class="btn" title="禁用" href="#"><i class="icon-minus-sign"></i></a>
+                                                    <a class="btn" title="删除" href="#"><i class="icon-remove"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><span class="badge">4</span></td>
+                                            <td><a href="http://product.dangdang.com/20079096.html" alt="大话设计模式" target="_blank">大话设计模式</a></td>
+                                            <td>模式架构</td>
+                                            <td>2012-06-05</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a class="btn" title="编辑" href="#"><i class="icon-edit"></i></a>
+                                                    <a class="btn" title="禁用" href="#"><i class="icon-minus-sign"></i></a>
+                                                    <a class="btn" title="删除" href="#"><i class="icon-remove"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><span class="badge">3</span></td>
+                                            <td><a href="http://product.dangdang.com/22633574.html" alt="JUnit实战(第2版)" target="_blank">JUnit实战(第2版)</a></td>
+                                            <td>Java开发</td>
+                                            <td>2013-07-04</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a class="btn" title="编辑" href="#"><i class="icon-edit"></i></a>
+                                                    <a class="btn" title="禁用" href="#"><i class="icon-minus-sign"></i></a>
+                                                    <a class="btn" title="删除" href="#"><i class="icon-remove"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div> <!-- #tab3 -->
+
+                        <div class="tab-pane" id="tab2">
+                            <p>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <h4> 快速发送邮件： </h4>
+
+                                        <form id="sendEmailForm" name="sendEmailForm" class="form-horizontal">
+                                            <fieldset>
+                                                <div class="control-group">
+                                                    <label for="hrUsername" class="control-label">HR姓名</label>
+
+                                                    <div class="controls">
+                                                        <input id="hrUsername" name="hrUsername" type="text" placeholder="非空" value="" AUTOCOMPLETE="off" class="input-xlarge"/>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label for="hrCompany" class="control-label">HR所在公司</label>
+
+                                                    <div class="controls">
+                                                        <input id="hrCompany" name="hrCompany" type="text" placeholder="非空" value="" AUTOCOMPLETE="off" class="input-xlarge"/>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label for="hrCompanyEmail" class="control-label">HR联系邮箱</label>
+
+                                                    <div class="controls">
+                                                        <input id="hrCompanyEmail" name="hrCompanyEmail" type="text" placeholder="xxxx@xxx.com" value="" AUTOCOMPLETE="off" class="input-xlarge"/>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label for="jobPositionIntroSiteUrl" class="control-label">职位介绍链接</label>
+
+                                                    <div class="controls">
+                                                        <input id="jobPositionIntroSiteUrl" name="jobPositionIntroSiteUrl" type="text" placeholder="http://" value="" AUTOCOMPLETE="off" class="input-xlarge"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-actions">
+                                                    <a class="btn btn-primary" id="sendButton">发送</a>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <!-- .span6 -->
+                                    <div class="span6">
+                                        <h4> 生成访问邀请信息： </h4>
+
+                                        <form id="invitationInfoForm" name="invitationInfoForm" class="form-horizontal">
+                                            <fieldset>
+                                                <div class="control-group">
+                                                    <label for="hour" class="control-label">允许访问小时</label>
+
+                                                    <div class="controls">
+                                                        <input id="hour" name="hour" type="text" placeholder="单位: 小时" value="1" autocomplete="off">
+                                                        <span class="help-block" id="hourOpinionBox">
+                                                             <span class="label label-info pointer">1小时<span style="display: none;">1</span></span>
+                                                             <span class="label label-info pointer">3小时<span style="display: none;">3</span></span>
+                                                             <span class="label label-info pointer">6小时<span style="display: none;">6</span></span>
+                                                             <span class="label label-info pointer">1天<span style="display: none;">24</span></span>
+                                                             <span class="label label-info pointer">3天<span style="display: none;">72</span></span>
+                                                             <span class="label label-info pointer">7天<span style="display: none;">168</span></span>
+                                                             <span class="label label-info pointer">半个月<span style="display: none;">360</span></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label for="invitationInfo" class="control-label">邀请信息</label>
+
+                                                    <div class="controls">
+                                                        <textarea id="invitationInfo" name="invitationInfo" placeholder="" rows="5"></textarea>
+
+                                                        <div id="statusInfo"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-actions">
+                                                    <a class="btn btn-primary" id="createInvitationInfoBtn">生成邀请信息</a>
+                                                    <a class="btn" id="copyInvitationInfoBtn">复制邀请信息</a>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                    <!-- .span6 -->
+                                </div>
+                            <!-- .row-fluid -->
+                            </p>
+                    </div>
+                    <!-- #tab2 -->
+                    </div> <!--/div.tab-content-->
+                </div> <!--/div#middleTab-->
+            </div> <!--/span10-->
+
+        </div> <!--/div.row-fluid-->
+
+        <hr>
+        <footer id="footer">
+            <p> ©2014 <a href="#" target="_blank">localhost</a>&nbsp;&nbsp;&nbsp;网站技术： <a href="http://getbootstrap.com/" target="_blank" title="Bootstrap官网">Bootstrap</a></p>
+        </footer>
+    </div><!--div.container-fluid-->
+
+
+    <!--[if lt IE 9]>
+    <script src="resources/js/html5shiv.js"></script>
+    <script src="resources/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="resources/js/jquery/jquery.1.10.2.js"></script>
+    <script src="resources/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="resources/js/nano.js"></script>
+    <script src="resources/js/underscore-min.js"></script>
+    <script src="resources/js/moment.min.js"></script>
+    <script src="resources/js/string.min.js"></script>
+    <script src="resources/js/app/index.js"></script>
+
+    <div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="aboutModalLabel">关于</h3>
+        </div>
+        <div class="modal-body">
+            <h4>标题1</h4>
+
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+
+            <h4>标题2</h4>
+
+            <p>
+                This <a href="#" role="button" class="btn popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.
+            </p>
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">保存</button>
+        </div>
+    </div>
+</body>
+</html>
